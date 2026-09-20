@@ -56,7 +56,11 @@ h1 {
 .stats {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
+}
+
+[hidden] {
+  display: none !important;
 }
 
 .stat,
@@ -260,6 +264,149 @@ textarea {
   color: #376336;
 }
 
+.status.locked {
+  background: #e6ddf2;
+  color: #4f3f74;
+}
+
+.quote-box {
+  background: #f7f8f5;
+  border: 1px solid #e2e6de;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.quote-box h4 {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.locked-box {
+  background: #f4f1fa;
+  border-color: #ddd3ee;
+}
+
+.done-box {
+  background: #f0f6ee;
+  border-color: #d3e2cf;
+}
+
+.quote-list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quote-item {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e6de;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 8px 10px;
+}
+
+.quote-detail {
+  align-items: center;
+  color: #4c554b;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  gap: 12px;
+}
+
+.quote-detail strong {
+  color: #202421;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.quote-form,
+.panel-form {
+  display: grid;
+  gap: 8px;
+}
+
+.panel-form {
+  border-top: 1px dashed #d5dbd1;
+  padding-top: 10px;
+}
+
+.quote-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.quote-grid input,
+.quote-grid select {
+  min-height: 38px;
+}
+
+.small {
+  font-size: 0.82rem;
+  padding: 6px 10px;
+}
+
+.ghost.danger {
+  background: #f3e4e0;
+  color: #a03a2c;
+}
+
+.error {
+  color: #a03a2c;
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.hint {
+  color: #828a80;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.overrun {
+  color: #8a5a22;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.rectifications {
+  color: #8a5a22;
+  display: grid;
+  font-size: 0.85rem;
+  gap: 4px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.history summary {
+  color: #687166;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.history ul {
+  color: #5c655b;
+  display: grid;
+  font-size: 0.85rem;
+  gap: 4px;
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -289,7 +436,11 @@ textarea {
   }
 
   .stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quote-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .repair {
